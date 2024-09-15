@@ -85,22 +85,23 @@ The Model was designed to include relevant fields (Input: **X**) for EC price pr
 - Floor Range  (Higher floor typically fetch higher price)
 
 
-## Model Monitoring and Automation (**Task 7**)
+## Assignment additional Proposal Task 
+Model Monitoring metrics and solution (**Task 7**)
 To ensure the model's performance and reliability, the following monitoring metrics are proposed:
-- Model Errors (To continuous perform well, solution is to continuously receive feedback and re-train model as factors like concept drift degrades the accuracy)
-- Drift Detection (Drift such as concept drift caused by new trend mechanism, like new MRT station, shopping malls and, schools, 
+- **Model Errors** (To continuous perform well, solution is to continuously receive feedback and re-train model as factors like concept drift degrades the accuracy)
+- **Drift Detection** (Drift such as concept drift caused by new trend mechanism, like new MRT station, shopping malls and, schools, 
 may make less features less important and some other features related to location being more important. Common drift detection libraries like Evidently, invoked through lambda function can also be used as solution)
-- Latency and Throughput of API Calls (API is exposed to public, very important to monitor abuse / intention of abuse even with stringent rate limitter in place. Set budget limit notification, monitor through AWS cloudwatch are already in placed.)
+- **Latency and Throughput of API Calls** (API is exposed to public, very important to monitor abuse / intention of abuse even with stringent rate limitter in place. Set budget limit notification, monitor through AWS cloudwatch are already in placed.)
 
-Automation processes proposed include (**Task 8**)
-- Automated feature engineering (With new LLM technology, LLM can make full use of text description to provide a discrete sentiment that is related to the house price, 
+Automation processes of feature engineering, model selection, and model monitoring (**Task 8**)
+- **Automated feature engineering** (With new LLM technology, LLM can make full use of text description to provide a discrete sentiment that is related to the house price, 
 there are also libraries like FeatureTools and tsfresh, and the use of libraries like AutoML to integrate these automated features into full ML workflow including training and evaluation)
-- Automated Model Retraining (Invoke Lambda function to periodically re-train based on latest data or upon drift detection)
-- Scheduled Model Evaluations (Invoke Lambda function to periodically run python libraries like Evidently to evaluate drifts and performance)
-- Setup AWS CloudWatch for monitoring API Gateway to track latency and throughput metrics, set threhold and alerts (already in place)
+- **Automated Model Retraining** (Invoke Lambda function to periodically re-train based on latest data or upon drift detection)
+- **Scheduled Model Evaluations** (Invoke Lambda function to periodically run python libraries like Evidently to evaluate drifts and performance)
+- **Setup AWS CloudWatch** for monitoring API Gateway to track latency and throughput metrics, set threhold and alerts (already in place)
 
-## Model Governance (**Task 9**)
-Model governance processes implemented include:
+
+Model governance processes implemented include (**Task 9**):
 - **Access Control**: Secure the API and database access. (In the event of up scaling, and the DB has to be moved to Cloud, 
 the DB should not be exposed to public as there are no needs to do so. The cloud API will needs to distribute API-keys to user for greater usage controllability)
 - **Versioning**: Version control for models and datasets. (Process of tracking and managing different versions of a machine learning model as it evolves. 
