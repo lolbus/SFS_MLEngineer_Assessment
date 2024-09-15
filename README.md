@@ -31,7 +31,6 @@ The project is divided into the following tasks:
 The cloud architecture for this project is designed to be scalable, secure, and efficient, following a flow from data acquisition to model training and deployment. Here is a breakdown of the architecture:
 
 1. **Data Acquisition and Storage**:
-   - **Data from URA**: The data is collected periodically from the Urban Redevelopment Authority (URA) to ensure the latest dataset is always available.
    - **PostgreSQL Processing**: The raw data from URA is processed in a PostgreSQL database to filter out relevant data for training the ML model.
    - **PostgreSQL Data Storage**: The processed and filtered data is then stored in the PostgreSQL database, ensuring it is ready for use in model training.
 
@@ -53,12 +52,16 @@ The cloud architecture for this project is designed to be scalable, secure, and 
 ![Cloud Architecture Diagram](cloud_architecture_diagram.png)
 
 ### Additional Notes
-- **Periodic Refresh**: The data pipeline is set up to refresh periodically to keep the dataset up-to-date for model retraining.
 - **Scalability**: AWS Elastic Beanstalk manages and scales the API automatically, adjusting resources based on the usage pattern.
 - **Security**: The API Gateway provides an additional security layer, including rate limiting to prevent misuse. Using the API Gateway provides plenty possiblities of continuous development to enhance security. (if given more time for the project assignment.)
 
 ## Data Acquisition and Storage
 Most raw data processing are done here. It involves invoking URA's API to retrieve the latest dataset, filling up DB table rows, and filtering away instances that are irrelevant.
+
+### Data model 
+-Entities: Input Features, Target Feature
+-Input Attributes: market_segment(str OCR/CCR/RCR), months_since_contract_date(int),	months_since_commence_date	area(int),	floor_range(str "01-05' '06-10' '11-15' '16-20' '21-25'")
+-Output (Price/Target) Attributes: price (float)
 
 ## Model Training
 The machine learning model was trained using a Cross Validation GridSearch method provided by scikit on the collected data. AI Assistant (cursor-small) was prompted the nature of the data and to provide a relevant extensive grid search parameters like models, hyperparamters to search for the best combination
