@@ -5,15 +5,12 @@ This repository contains the solution to the Machine Learning Engineer assessmen
 ## Table of Contents
 - [Background](#background)
 - [Project Overview](#project-overview)
-- [Architecture](#architecture)
+- [Cloud Architecture](#architecture)
 - [Data Collection and Storage](#data-collection-and-storage)
 - [Model Training](#model-training)
-- [API Deployment](#api-deployment)
+- [Assignment additional Proposal Task](#additional-task)
 - [Frontend Interface](#frontend-interface)
-- [Model Monitoring and Automation](#model-monitoring-and-automation)
-- [Model Governance](#model-governance)
 - [How to Run](#how-to-run)
-- [Future Work](#future-work)
 
 ## Background
 HDB is interested in monitoring price trends for Executive Condominiums (ECs) at key milestones:
@@ -30,7 +27,7 @@ The project is divided into the following tasks:
 4. Deploy the API onto a cloud service. [Completed using AWS Elastic Beanstalk and API's sample usage available on cloud_inferencer.ipynb]
 5. Proposal for Improvement on the above solution
 
-## Simple Explanation of My Cloud Architecture
+## Cloud Architecture
 The cloud architecture for this project is designed to be scalable, secure, and efficient, following a flow from data acquisition to model training and deployment. Here is a breakdown of the architecture:
 
 1. **Data Acquisition and Storage**:
@@ -114,7 +111,7 @@ If HDB is using it to predict price outside of OCR region it must bear in mind t
 
 
 ## Frontend Interface
-cloud_inferencer.ipynb 
+cloud_inferencer.ipynb - simple illustration use case of cloud api
 
 
 ## How to Run
