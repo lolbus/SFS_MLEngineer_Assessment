@@ -60,8 +60,9 @@ Most raw data processing are done here. It involves invoking URA's API to retrie
 
 ### Data model 
 - Entities: Input Features, Target Feature
-- Input Attributes: market_segment(str OCR/CCR/RCR), months_since_contract_date(int),	months_since_commence_date	area(int),	floor_range(str "01-05' '06-10' '11-15' '16-20' '21-25'")
+- Input Attributes: market_segment(str OCR/CCR/RCR), months_since_contract_date(int), months_since_commence_date	area(int), floor_range(str "01-05' '06-10' '11-15' '16-20' '21-25'"), Area(int)
 - Output (Price/Target) Attributes: price (float)
+- Refer to cloud_inferencer.ipynb for simple ML model usage
 
 ## Model Training
 The machine learning model was trained using a Cross Validation GridSearch method provided by scikit on the collected data. AI Assistant (cursor-small) was prompted the nature of the data and to provide a relevant extensive grid search parameters like models, hyperparamters to search for the best combination
