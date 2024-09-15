@@ -91,7 +91,7 @@ may make less features less important and some other features related to locatio
 - **Latency and Throughput of API Calls** (API is exposed to public, very important to monitor abuse / intention of abuse even with stringent rate limitter in place. Set budget limit notification, monitor through AWS cloudwatch are already in placed.)
 
 Automation processes of feature engineering, model selection, and model monitoring (**Task 8**)
-- **Automated feature engineering** (With new LLM technology, LLM can make full use of text description to provide a discrete sentiment that is related to the house price, 
+- **Automated feature engineering** (With new LLM technology, LLM agents can make full use of text description to automatically provide a discrete sentiment that is related to the house price, 
 there are also libraries like FeatureTools and tsfresh, and the use of libraries like AutoML to integrate these automated features into full ML workflow including training and evaluation)
 - **Automated Model Retraining** (Invoke Lambda function to periodically re-train based on latest data or upon drift detection)
 - **Scheduled Model Evaluations** (Invoke Lambda function to periodically run python libraries like Evidently to evaluate drifts and performance)
